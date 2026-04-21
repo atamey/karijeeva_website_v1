@@ -1,0 +1,184 @@
+/* Karijeeva — Liquid Gold Noir Design Tokens (Phase 7) */
+
+:root {
+    /* ------------------------------------------------------------------ */
+    /* Typography — swap to rebrand fonts globally                         */
+    /* ------------------------------------------------------------------ */
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body:    'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-accent:  'Instrument Serif', Georgia, serif;
+
+    /* Fraunces variable-axis for the dramatic editorial headline look */
+    --font-display-settings: "opsz" 144, "SOFT" 100, "WONK" 0;
+
+    /* ------------------------------------------------------------------ */
+    /* Brand palette — Liquid Gold Noir                                    */
+    /* ------------------------------------------------------------------ */
+    --brand-obsidian:       #0B0806;   /* primary bg, deep espresso black */
+    --brand-obsidian-soft:  #141009;   /* secondary dark surface */
+    --brand-parchment:      #F4ECDB;   /* secondary surface (light sections) */
+    --brand-parchment-soft: #EBE1CC;
+    --brand-gold:           #E8A84A;   /* liquid gold — the single accent */
+    --brand-gold-deep:      #B3802F;
+    --brand-bone:           #ECE6D6;   /* type color on dark */
+    --brand-husk:           #3A2418;   /* deep muted brown for depth */
+    --brand-ink:            #14100B;   /* type on light */
+
+    --text-primary: var(--brand-ink);
+    --text-muted:   #6B5F4D;
+
+    /* Spacing */
+    --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+    --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+
+    /* Radii */
+    --radius-sm: 6px; --radius-md: 12px; --radius-lg: 20px; --radius-pill: 999px;
+
+    /* Shadows */
+    --shadow-soft:     0 2px 10px -4px rgba(11, 8, 6, 0.18);
+    --shadow-card:     0 12px 28px -14px rgba(11, 8, 6, 0.32);
+    --shadow-elevated: 0 28px 60px -24px rgba(11, 8, 6, 0.44);
+    --shadow-gold:     0 0 0 1px rgba(232, 168, 74, 0.28), 0 18px 40px -18px rgba(232, 168, 74, 0.42);
+}
+
+/* Font helpers */
+.font-display {
+    font-family: var(--font-display);
+    font-variation-settings: var(--font-display-settings);
+}
+.font-body   { font-family: var(--font-body); }
+.font-accent { font-family: var(--font-accent); }
+
+/* Type scale utilities */
+.text-h1, .text-h2, .text-h3, .text-h4 {
+    font-family: var(--font-display);
+    font-variation-settings: var(--font-display-settings);
+}
+.text-h1 { font-size: 3.75rem; line-height: 4rem;    letter-spacing: -0.025em; }
+.text-h2 { font-size: 2.85rem; line-height: 3.25rem; letter-spacing: -0.02em;  }
+.text-h3 { font-size: 2rem;    line-height: 2.4rem;  letter-spacing: -0.01em;  }
+.text-h4 { font-size: 1.5rem;  line-height: 2rem; }
+
+@media (max-width: 640px) {
+    .text-h1 { font-size: 2.6rem; line-height: 2.85rem; }
+    .text-h2 { font-size: 2.1rem; line-height: 2.4rem; }
+    .text-h3 { font-size: 1.65rem; line-height: 2rem; }
+}
+
+/* Selection */
+::selection { background: var(--brand-gold); color: var(--brand-obsidian); }
+
+/* Gold underline accent */
+.gold-underline { position: relative; display: inline-block; }
+.gold-underline::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -4px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
+}
+
+/* Glass surfaces */
+.glass-card {
+    background: rgba(244, 236, 219, 0.78);
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(232, 168, 74, 0.22);
+}
+.glass-dark {
+    background: rgba(11, 8, 6, 0.72);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(232, 168, 74, 0.22);
+}
+
+/* Branded card */
+.brand-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(232, 168, 74, 0.22);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform 320ms cubic-bezier(.2,.8,.2,1),
+                box-shadow 320ms cubic-bezier(.2,.8,.2,1),
+                border-color 320ms ease;
+}
+.brand-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 168, 74, 0.48);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-luxe {
+    background: var(--brand-gold); color: var(--brand-obsidian);
+    transition: transform 240ms ease, box-shadow 240ms ease, background-color 240ms ease;
+    letter-spacing: 0.08em;
+}
+.btn-luxe:hover {
+    background: var(--brand-gold-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px -12px rgba(232, 168, 74, 0.55);
+}
+
+/* Blog prose — repainted */
+.blog-prose p           { margin-top: 1.2rem; line-height: 1.75; }
+.blog-prose h2          { font-family: var(--font-display); font-variation-settings: var(--font-display-settings);
+                          font-size: 2rem; line-height: 2.5rem; color: var(--brand-obsidian); margin-top: 2.5rem; }
+.blog-prose h3          { font-family: var(--font-display); font-variation-settings: var(--font-display-settings);
+                          font-size: 1.5rem; line-height: 2rem; color: var(--brand-obsidian); margin-top: 2rem; }
+.blog-prose ul, .blog-prose ol { margin-top: 1rem; padding-left: 1.4rem; }
+.blog-prose ul          { list-style: disc; }
+.blog-prose ol          { list-style: decimal; }
+.blog-prose li          { margin-top: 0.4rem; }
+.blog-prose a           { color: var(--brand-gold-deep); text-decoration: underline; text-underline-offset: 3px; }
+.blog-prose strong      { color: var(--brand-husk); font-weight: 600; }
+.blog-prose em          { font-family: var(--font-accent); font-style: italic; }
+.blog-prose table       { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.9rem; }
+.blog-prose th, .blog-prose td { border: 1px solid rgba(232, 168, 74, 0.22); padding: 0.6rem 0.8rem; text-align: left; }
+.blog-prose th          { background: var(--brand-parchment-soft); font-family: var(--font-display); color: var(--brand-obsidian); }
+
+/* Entrance animation */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up  { animation: fadeUp 700ms cubic-bezier(.22,.61,.36,1) both; }
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* Phase 7 — letter bloom (staggered reveal, applied via inline style animation-delay) */
+@keyframes letterBloom {
+    0%   { opacity: 0; transform: translateY(14px); filter: blur(4px); }
+    60%  { filter: blur(0); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.letter-bloom > span {
+    display: inline-block;
+    opacity: 0;
+    animation: letterBloom 620ms cubic-bezier(.22,.61,.36,1) both;
+}
+.letter-bloom > span.sp { width: 0.28em; }
+
+/* Film scroll — gold dust particles (non-essential atmospherics) */
+@keyframes drift {
+    0%   { transform: translate3d(0, 0, 0); opacity: 0.0; }
+    25%  { opacity: 0.7; }
+    100% { transform: translate3d(var(--dx, 60px), var(--dy, -120px), 0); opacity: 0; }
+}
+.dust-particle {
+    position: absolute; width: 3px; height: 3px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,168,74,0.9), rgba(232,168,74,0));
+    animation: drift var(--dur, 18s) ease-out infinite;
+    pointer-events: none;
+}
+
+/* Page route transition scrim */
+.route-scrim {
+    position: fixed; inset: 0; pointer-events: none; z-index: 90;
+    background: var(--brand-obsidian);
+    opacity: 0;
+    transition: opacity 260ms ease;
+}
+.route-scrim.active { opacity: 0.3; }
+
+/* Reduced motion → static everything */
+@media (prefers-reduced-motion: reduce) {
+    .letter-bloom > span { animation: none; opacity: 1; }
+    .dust-particle { display: none; }
+    .fade-up { animation: none; opacity: 1; transform: none; }
+}

@@ -1,0 +1,5 @@
+/* Karijeeva — minimal app-level resets. Most styles live in tokens + Tailwind. */
+
+.App {
+    min-height: 100vh;
+}

@@ -1,0 +1,18 @@
+{
+  "short_name": "Karijeeva",
+  "name": "Karijeeva · Pure cold-pressed coconut oil",
+  "description": "Non-adulterated, cold-pressed coconut oil crafted by Kadle Global Pvt Ltd. Dosa drizzle, champi ritual, pantry staple.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "32x32 48x48"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0B0806",
+  "background_color": "#F4ECDB",
+  "orientation": "portrait-primary",
+  "categories": ["food", "shopping", "lifestyle"]
+}

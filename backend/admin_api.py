@@ -91,6 +91,22 @@ class SettingsPatch(BaseModel):
     press_logos: Optional[List[Dict[str, Any]]] = None
     trust_stats: Optional[List[Dict[str, Any]]] = None
     contact: Optional[Dict[str, Any]] = None
+    # Phase 9 — company + social fields (flat so the footer / legal pages / admin form all share one shape)
+    company_name: Optional[str] = None
+    cin: Optional[str] = None
+    registered_address: Optional[str] = None
+    support_email: Optional[str] = None
+    legal_email: Optional[str] = None
+    privacy_email: Optional[str] = None
+    support_phone: Optional[str] = None
+    hours_ist: Optional[str] = None
+    fssai_license: Optional[str] = None
+    parent_site_url: Optional[str] = None
+    instagram_url: Optional[str] = None
+    facebook_url: Optional[str] = None
+    youtube_url: Optional[str] = None
+    whatsapp_url: Optional[str] = None
+    linkedin_url: Optional[str] = None
 
 
 class ContactRead(BaseModel):

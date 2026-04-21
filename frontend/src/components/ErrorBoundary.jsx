@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import { AlertTriangle, Home, Mail } from "lucide-react";
 import { api } from "@/lib/api";
+import { SITE_FALLBACKS } from "@/lib/siteSettings";
 
 export default class ErrorBoundary extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ export default class ErrorBoundary extends Component {
             <Link to="/" onClick={this.reset} className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-pill bg-brand-obsidian text-brand-gold font-body text-xs tracking-widest uppercase hover:bg-brand-obsidian-soft">
               <Home className="w-4 h-4" /> Go home
             </Link>
-            <a href="mailto:hello@karijeeva.in?subject=Something%20broke%20on%20the%20site" className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-pill border border-brand-gold/40 text-brand-obsidian hover:bg-brand-gold/10 font-body text-xs tracking-widest uppercase">
+            <a href={`mailto:${SITE_FALLBACKS.support_email}?subject=Something%20broke%20on%20the%20site`} className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-pill border border-brand-gold/40 text-brand-obsidian hover:bg-brand-gold/10 font-body text-xs tracking-widest uppercase">
               <Mail className="w-4 h-4" /> Report issue
             </a>
           </div>

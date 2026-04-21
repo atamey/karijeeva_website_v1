@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, FileText } from "lucide-react";
 
 import Seo, { breadcrumbLd } from "@/components/seo/Seo";
 import { postContact } from "@/lib/api";
+import { useSiteSettings, pick } from "@/lib/siteSettings";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,6 +16,7 @@ export default function Contact() {
     name: "", email: "", phone: "", subject: "", message: "",
   });
   const [loading, setLoading] = useState(false);
+  const settings = useSiteSettings();
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
@@ -35,6 +37,13 @@ export default function Contact() {
       setLoading(false);
     }
   };
+
+  const company = pick(settings, "company_name");
+  const address = pick(settings, "registered_address");
+  const email = pick(settings, "support_email");
+  const phone = pick(settings, "support_phone");
+  const hours = pick(settings, "hours_ist");
+  const cin = pick(settings, "cin");
 
   return (
     <>
@@ -83,20 +92,29 @@ export default function Contact() {
           {/* Sidebar */}
           <aside className="space-y-8">
             <ScrollReveal>
-              <InfoRow icon={MapPin} title="Address" body={"Kadle Global Pvt Ltd\n42 Indiranagar 6th Main\nBengaluru 560038"} />
-              <InfoRow icon={Mail} title="Email" body="hello@karijeeva.in" />
-              <InfoRow icon={Phone} title="Phone" body="+91 80 4567 2890" />
-              <InfoRow icon={Clock} title="Hours" body="Mon–Sat · 10 AM – 6 PM IST" />
-            </ScrollReveal>
-
-            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-brand-gold/20 shadow-soft">
-              <iframe
-                title="Karijeeva Bengaluru office"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.6395%2C12.9665%2C77.6535%2C12.9805&amp;layer=mapnik&amp;marker=12.9735%2C77.6465"
-                className="w-full h-full border-0"
-                loading="lazy"
+              <InfoRow
+                icon={MapPin}
+                title="Address"
+                testid="contact-address"
+                body={`${company}\n${address}`}
               />
-            </div>
+              <InfoRow
+                icon={Mail}
+                title="Email"
+                testid="contact-email-info"
+                body={email}
+                href={email ? `mailto:${email}` : null}
+              />
+              <InfoRow
+                icon={Phone}
+                title="Phone"
+                testid="contact-phone-info"
+                body={phone}
+                href={phone ? `tel:${phone.replace(/[^+\d]/g, "")}` : null}
+              />
+              <InfoRow icon={Clock} title="Hours" testid="contact-hours" body={hours} />
+              <InfoRow icon={FileText} title="CIN" testid="contact-cin" body={cin} />
+            </ScrollReveal>
           </aside>
         </div>
       </section>
@@ -113,7 +131,12 @@ function Field({ label, children }) {
   );
 }
 
-function InfoRow({ icon: Icon, title, body }) {
+function InfoRow({ icon: Icon, title, body, href, testid }) {
+  const content = (
+    <p className="font-body text-brand-husk mt-1 whitespace-pre-line leading-relaxed" data-testid={testid}>
+      {body}
+    </p>
+  );
   return (
     <div className="flex gap-4 mb-6">
       <span className="h-10 w-10 shrink-0 rounded-full bg-brand-gold/15 text-brand-gold flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4">
@@ -121,7 +144,9 @@ function InfoRow({ icon: Icon, title, body }) {
       </span>
       <div>
         <p className="font-body text-xs uppercase tracking-[0.2em] text-brand-gold">{title}</p>
-        <p className="font-body text-brand-husk mt-1 whitespace-pre-line leading-relaxed">{body}</p>
+        {href ? (
+          <a href={href} className="hover:text-brand-gold transition-colors">{content}</a>
+        ) : content}
       </div>
     </div>
   );

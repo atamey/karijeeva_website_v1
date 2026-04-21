@@ -30,6 +30,17 @@ import Wishlist from "@/pages/Wishlist";
 import { Account, Orders } from "@/pages/Account";
 import NotFound from "@/pages/NotFound";
 
+// Phase 9 — footer / handoff surfaces
+import FAQsPage from "@/pages/FAQs";
+import TrackOrder from "@/pages/TrackOrder";
+import {
+  TheFarm, ColdPressProcess, Sustainability, Press, Careers,
+  GiftCards, SubscribeSave,
+} from "@/pages/brand/BrandPages";
+import {
+  ShippingPolicy, ReturnsPolicy, PrivacyPolicy, TermsOfService, CookiePolicy,
+} from "@/pages/legal/Policies";
+
 import AdminRoute from "@/components/admin/AdminRoute";
 import AdminLayout from "@/components/admin/AdminLayout";
 // Lazy-load admin pages — separate bundle
@@ -92,6 +103,22 @@ function AnimatedRoutes() {
         <Route path="/wishlist" element={wrap(<Wishlist />)} />
         <Route path="/account" element={wrap(<Account />)} />
         <Route path="/account/orders" element={wrap(<Orders />)} />
+
+        {/* Phase 9 — footer surfaces */}
+        <Route path="/faqs"                element={wrap(<FAQsPage />)} />
+        <Route path="/track-order"         element={wrap(<TrackOrder />)} />
+        <Route path="/the-farm"            element={wrap(<TheFarm />)} />
+        <Route path="/cold-press-process"  element={wrap(<ColdPressProcess />)} />
+        <Route path="/sustainability"      element={wrap(<Sustainability />)} />
+        <Route path="/press"               element={wrap(<Press />)} />
+        <Route path="/careers"             element={wrap(<Careers />)} />
+        <Route path="/gift-cards"          element={wrap(<GiftCards />)} />
+        <Route path="/subscribe-save"      element={wrap(<SubscribeSave />)} />
+        <Route path="/shipping-policy"     element={wrap(<ShippingPolicy />)} />
+        <Route path="/returns-policy"      element={wrap(<ReturnsPolicy />)} />
+        <Route path="/privacy-policy"      element={wrap(<PrivacyPolicy />)} />
+        <Route path="/terms"               element={wrap(<TermsOfService />)} />
+        <Route path="/cookie-policy"       element={wrap(<CookiePolicy />)} />
 
         {/* Admin — separate shell, no storefront Layout */}
         <Route path="/admin" element={admin(<AdminDashboard />)} />

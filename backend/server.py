@@ -519,6 +519,19 @@ async def sitemap():
         {"loc": f"{base}/recipes", "priority": "0.8"},
         {"loc": f"{base}/contact", "priority": "0.5"},
         {"loc": f"{base}/cold-pressed-coconut-oil-benefits", "priority": "0.9"},
+        # Phase 9 — additional static surfaces
+        {"loc": f"{base}/the-farm", "priority": "0.7"},
+        {"loc": f"{base}/cold-press-process", "priority": "0.7"},
+        {"loc": f"{base}/sustainability", "priority": "0.6"},
+        {"loc": f"{base}/press", "priority": "0.5"},
+        {"loc": f"{base}/careers", "priority": "0.4"},
+        {"loc": f"{base}/faqs", "priority": "0.6"},
+        {"loc": f"{base}/shipping-policy", "priority": "0.4"},
+        {"loc": f"{base}/returns-policy", "priority": "0.4"},
+        {"loc": f"{base}/privacy-policy", "priority": "0.4"},
+        {"loc": f"{base}/terms", "priority": "0.4"},
+        {"loc": f"{base}/cookie-policy", "priority": "0.3"},
+        {"loc": f"{base}/track-order", "priority": "0.4"},
     ]
     async for p in db.products.find({"is_active": True}, {"_id": 0, "slug": 1}):
         urls.append({"loc": f"{base}/products/{p['slug']}", "priority": "0.9"})
@@ -538,6 +551,7 @@ async def robots():
     text = (
         "User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /razorpay-poc\n"
         "Disallow: /design-system\nDisallow: /checkout\nDisallow: /account\n"
+        "Disallow: /gift-cards\nDisallow: /subscribe-save\n"
         f"Sitemap: {SITE_PUBLIC_URL}/api/sitemap.xml\n"
     )
     return Response(content=text, media_type="text/plain")

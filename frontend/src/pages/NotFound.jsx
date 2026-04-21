@@ -8,7 +8,7 @@ export default function NotFound() {
       <Seo title="Page not found" description="The page you are looking for doesn't exist. Discover our oils and stories instead." />
       <section className="min-h-[60vh] bg-brand-parchment flex items-center" data-testid="not-found-page">
         <div className="max-w-2xl mx-auto px-6 py-20 text-center">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">404</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">404</p>
           <h1 className="font-display text-5xl sm:text-6xl text-brand-obsidian mt-3 leading-tight">This page is off the shelf.</h1>
           <p className="font-body text-brand-husk mt-5 leading-relaxed">
             We couldn't find what you're looking for. Perhaps a cold-pressed oil, a recipe, or the story behind our craft will tempt you instead.

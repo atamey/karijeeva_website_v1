@@ -42,7 +42,7 @@ export default function AdminDashboard() {
   return (
     <div className="space-y-8" data-testid="admin-dashboard">
       <div>
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Overview</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Overview</p>
         <h1 className="font-display text-4xl text-brand-obsidian">Dashboard</h1>
       </div>
 

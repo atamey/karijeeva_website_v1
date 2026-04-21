@@ -32,7 +32,7 @@ export default function Blog() {
 
       <section className="bg-brand-parchment-soft border-b border-brand-gold/15">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">The journal</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">The journal</p>
           <h1 className="text-h1 text-brand-obsidian">Stories from the kitchen.</h1>
           <p className="font-body text-body-lg text-ink-muted mt-5 max-w-2xl">
             Recipes we return to. Essays we've earned. Harvest notes from the grove.

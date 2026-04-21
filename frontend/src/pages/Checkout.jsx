@@ -212,7 +212,7 @@ export default function Checkout() {
                   <Button variant="ghost" size="sm" onClick={() => setStep(1)}><ChevronLeft className="w-3 h-3" /> Edit address</Button>
                   <h2 className="text-h3 text-brand-obsidian">Review your order</h2>
                   <div className="brand-card p-6 bg-white">
-                    <p className="font-accent italic text-xs tracking-[0.25em] uppercase text-brand-gold mb-2">Ship to</p>
+                    <p className="eyebrow tracking-[0.25em] text-brand-gold mb-2">Ship to</p>
                     <p className="font-body text-sm text-brand-husk leading-relaxed">
                       <strong>{address.full_name}</strong> · {address.phone}<br />
                       {address.line1}{address.line2 ? `, ${address.line2}` : ""}<br />
@@ -271,7 +271,7 @@ export default function Checkout() {
   );
 }
 
-function Row({ label, value, className = "" }) {
+function Row({ label, value, className="" }) {
   return (
     <div className={`flex items-center justify-between ${className}`}>
       <dt>{label}</dt><dd>{value}</dd>

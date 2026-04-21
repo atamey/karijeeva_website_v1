@@ -85,7 +85,7 @@ export default function AdminOrderDetail() {
 
       <div className="flex items-end justify-between flex-wrap gap-4">
         <div>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Order</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">Order</p>
           <h1 className="font-display text-4xl text-brand-obsidian" data-testid="order-number">{order.order_number}</h1>
           <div className="mt-2 flex items-center gap-3">
             <Badge className={`${STATUS_COLORS[order.status] || ""} border-0 font-body text-[10px] uppercase tracking-widest`}>{order.status.replace(/_/g, " ")}</Badge>
@@ -170,7 +170,7 @@ export default function AdminOrderDetail() {
         <div className="space-y-6">
           {/* Customer + address */}
           <div className="bg-white border border-brand-gold/20 rounded-lg p-5">
-            <h3 className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-2">Customer</h3>
+            <h3 className="eyebrow text-brand-gold tracking-[0.3em] mb-2">Customer</h3>
             <p className="font-display text-brand-obsidian">{order.address_snapshot?.full_name}</p>
             <p className="font-body text-sm text-brand-husk">{order.guest_email || "—"}</p>
             <p className="font-body text-sm text-ink-muted mt-2 leading-relaxed">
@@ -181,7 +181,7 @@ export default function AdminOrderDetail() {
 
           {/* Status transition */}
           <div className="bg-white border border-brand-gold/20 rounded-lg p-5" data-testid="order-status-card">
-            <h3 className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Change status</h3>
+            <h3 className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Change status</h3>
             <Select value={status} onValueChange={setStatus}>
               <SelectTrigger className="h-10 bg-brand-parchment border-brand-gold/30 font-body" data-testid="status-select"><SelectValue /></SelectTrigger>
               <SelectContent>{STATUS_OPTIONS.map((s) => <SelectItem key={s} value={s} className="font-body">{s.replace(/_/g, " ")}</SelectItem>)}</SelectContent>
@@ -197,7 +197,7 @@ export default function AdminOrderDetail() {
 
           {/* Shipping */}
           <div className="bg-white border border-brand-gold/20 rounded-lg p-5" data-testid="shipping-card">
-            <h3 className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3 flex items-center gap-2"><Truck className="w-3.5 h-3.5" /> Shipping</h3>
+            <h3 className="eyebrow text-brand-gold tracking-[0.3em] mb-3 flex items-center gap-2"><Truck className="w-3.5 h-3.5" /> Shipping</h3>
             {order.tracking ? (
               <div className="font-body text-sm">
                 <p><strong>{order.tracking.carrier}</strong> · <span className="text-ink-muted">{order.tracking.awb}</span></p>

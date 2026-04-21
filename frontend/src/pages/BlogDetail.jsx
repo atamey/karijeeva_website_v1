@@ -68,7 +68,7 @@ export default function BlogDetail() {
           </div>
 
           <h1 className="text-h1 text-brand-obsidian leading-[1.05]" data-testid="blog-detail-title">{post.title}</h1>
-          <p className="font-accent italic text-brand-husk/80 text-lg mt-5">{post.excerpt}</p>
+          <p className="font-display text-brand-husk/80 text-lg mt-5">{post.excerpt}</p>
 
           {/* TL;DR box */}
           {post.tldr && (
@@ -76,7 +76,7 @@ export default function BlogDetail() {
               data-testid="blog-tldr"
               className="mt-10 p-6 rounded-lg border-2 border-dashed border-brand-gold/50 bg-white"
             >
-              <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">TL;DR</p>
+              <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">TL;DR</p>
               <p className="font-body text-brand-husk/90 whitespace-pre-line">{post.tldr}</p>
             </aside>
           )}
@@ -101,7 +101,7 @@ export default function BlogDetail() {
         <section className="bg-brand-parchment-soft border-y border-brand-gold/15">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
             <ScrollReveal>
-              <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">More from the journal</p>
+              <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">More from the journal</p>
               <h2 className="text-h2 text-brand-obsidian mb-10">Keep reading.</h2>
             </ScrollReveal>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

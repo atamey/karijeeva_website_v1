@@ -35,7 +35,7 @@ export default class ErrorBoundary extends Component {
           <div className="mx-auto w-16 h-16 rounded-full bg-brand-parchment-soft flex items-center justify-center text-brand-gold">
             <AlertTriangle className="w-7 h-7" />
           </div>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mt-6">Technical hiccup</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mt-6">Technical hiccup</p>
           <h1 className="font-display text-h2 text-brand-obsidian mt-2">Something's brewing</h1>
           <p className="font-body text-brand-husk mt-3 leading-relaxed">
             A small unexpected error interrupted your visit. It has been reported to us.

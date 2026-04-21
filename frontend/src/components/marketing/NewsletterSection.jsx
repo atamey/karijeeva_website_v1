@@ -75,7 +75,7 @@ export function useNewsletter() {
         </DialogHeader>
 
         <div className="my-6 p-6 rounded-lg border-2 border-dashed border-brand-gold/50 bg-white text-center">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-2">
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-2">
             {welcome?.desc || "Your welcome code"}
           </p>
           <button
@@ -122,7 +122,7 @@ export default function NewsletterSection() {
         <div className="absolute inset-0 pointer-events-none opacity-30"
              style={{ background: "radial-gradient(circle at 70% 30%, rgba(232, 168, 74,0.35), transparent 60%)" }} />
         <div className="relative max-w-4xl mx-auto px-6 lg:px-10 py-24 text-center">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">
             Dawn letter
           </p>
           <h2 className="text-h2 text-brand-parchment">

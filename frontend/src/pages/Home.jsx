@@ -178,13 +178,13 @@ function ScrollFilm({ activeBeat, setActiveBeat }) {
             <img src={b.img} alt={b.alt} loading={i === 0 ? "eager" : "lazy"} decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-80" />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-obsidian via-brand-obsidian/60 to-transparent" />
             <div className="relative z-10 max-w-4xl mx-auto px-6 pb-24 pt-32 w-full">
-              <p className="font-accent italic text-brand-gold text-xs tracking-[0.35em] uppercase mb-5">
+              <p className="eyebrow text-brand-gold tracking-[0.35em] mb-5">
                 {b.pillar}
               </p>
-              <h2 className="font-display text-[2.4rem] leading-[1.05] text-brand-bone" style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}>
+              <h2 className="font-display text-[2.4rem] leading-[1.05] text-brand-bone" style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0" }}>
                 {b.headline}
               </h2>
-              <p className="font-accent italic text-brand-bone/80 text-lg mt-4">{b.sub}</p>
+              <p className="font-display text-brand-bone/80 text-lg mt-4">{b.sub}</p>
               {b.cta && (
                 <Button asChild variant="primary" size="lg" className="mt-8">
                   <Link to="/products" data-testid="film-cta">Discover the oils <ArrowRight /></Link>
@@ -226,17 +226,17 @@ function ScrollFilm({ activeBeat, setActiveBeat }) {
       {/* Foreground copy — swaps per activeBeat */}
       <div className="relative z-10 h-full max-w-6xl mx-auto px-6 lg:px-10 flex flex-col justify-end pb-24">
         <div key={activeBeat} className="animate-[fadeUp_700ms_cubic-bezier(.22,.61,.36,1)_both]">
-          <p className="font-accent italic text-brand-gold text-[11px] sm:text-xs tracking-[0.4em] uppercase mb-6" data-testid={`beat-pillar-${activeBeat + 1}`}>
+          <p className="eyebrow text-brand-gold text-[11px] sm:text-xs tracking-[0.4em] mb-6" data-testid={`beat-pillar-${activeBeat + 1}`}>
             Act {activeBeat + 1} · {BEATS[activeBeat].pillar}
           </p>
           <h2
             className="font-display text-[clamp(2.6rem,6vw,5.5rem)] leading-[1.02] text-brand-bone tracking-[-0.02em]"
-            style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 0" }}
+            style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0, 'WONK' 0" }}
             data-testid={`beat-headline-${activeBeat + 1}`}
           >
             <LetterBloom text={BEATS[activeBeat].headline} active delay={120} />
           </h2>
-          <p className="font-accent italic text-brand-bone/85 text-lg sm:text-xl mt-5 max-w-xl">
+          <p className="font-display text-brand-bone/85 text-lg sm:text-xl mt-5 max-w-xl">
             {BEATS[activeBeat].sub}
           </p>
           {BEATS[activeBeat].cta && (
@@ -315,11 +315,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
             <div>
-              <p className="font-accent italic text-brand-gold text-xs tracking-[0.35em] uppercase mb-4">
+              <p className="eyebrow text-brand-gold tracking-[0.35em] mb-4">
                 The grove's finest
               </p>
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.75rem)] leading-[1.05] text-brand-bone max-w-2xl"
-                  style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}>
+                  style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0" }}>
                 Three oils, <span className="gold-underline text-brand-gold">one promise.</span>
               </h2>
             </div>
@@ -337,8 +337,8 @@ export default function Home() {
       <section className="bg-brand-parchment py-32" data-testid="home-vision">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="h-px w-24 bg-brand-gold mx-auto mb-10" />
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.35em] uppercase mb-6">Our vision</p>
-          <p className="font-accent italic text-[clamp(1.4rem,2.4vw,2rem)] leading-[1.5] text-brand-ink max-w-[38ch] mx-auto">
+          <p className="eyebrow text-brand-gold tracking-[0.35em] mb-6">Our vision</p>
+          <p className="font-display text-[clamp(1.4rem,2.4vw,2rem)] leading-[1.5] text-brand-ink max-w-[38ch] mx-auto">
             {site?.vision_statement || "To return coconut oil to what it always was — a single ingredient, pressed slow, bottled clean, shipped close. Nothing more."}
           </p>
           <div className="h-px w-24 bg-brand-gold mx-auto mt-10" />
@@ -348,15 +348,15 @@ export default function Home() {
       {/* 5 NON-NEGOTIABLES — ritual list on obsidian */}
       <section className="bg-brand-obsidian py-28" data-testid="home-pillars">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.35em] uppercase mb-5">Our five non-negotiables</p>
+          <p className="eyebrow text-brand-gold tracking-[0.35em] mb-5">Our five non-negotiables</p>
           <h2 className="font-display text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.05] text-brand-bone max-w-2xl mb-16"
-              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}>
+              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0" }}>
             What we will <span className="gold-underline text-brand-gold">never compromise.</span>
           </h2>
           <ol className="divide-y divide-brand-gold/15 border-y border-brand-gold/15">
             {NON_NEGOTIABLES.map((it, i) => (
               <li key={it.num} className="py-8 grid grid-cols-[60px_1fr] md:grid-cols-[80px_220px_1fr] gap-4 md:gap-10 items-start" data-testid={`pillar-${i + 1}`}>
-                <span className="font-display text-brand-gold text-3xl md:text-4xl" style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80" }}>{it.num}</span>
+                <span className="font-display text-brand-gold text-3xl md:text-4xl" style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0" }}>{it.num}</span>
                 <p className="font-display text-brand-bone text-lg md:text-2xl">{it.label}</p>
                 <p className="font-body text-brand-bone/75 text-sm md:text-base leading-relaxed col-span-2 md:col-span-1">{it.line}</p>
               </li>
@@ -369,16 +369,16 @@ export default function Home() {
       {testimonials.length > 0 && (
         <section className="bg-brand-parchment py-28" data-testid="home-reviews">
           <div className="max-w-6xl mx-auto px-6 lg:px-10">
-            <p className="font-accent italic text-brand-gold-deep text-xs tracking-[0.35em] uppercase mb-3">From those who live with us</p>
+            <p className="eyebrow text-brand-gold-deep tracking-[0.35em] mb-3">From those who live with us</p>
             <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.05] text-brand-ink mb-12 max-w-2xl"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}>
+                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0" }}>
               Written in kitchens, <span className="gold-underline">not studios.</span>
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.slice(0, 3).map((r, i) => (
-                <figure key={i} className="bg-white/60 border border-brand-gold/20 rounded-lg p-7 relative">
-                  <span className="absolute -top-5 left-6 font-display text-brand-gold text-6xl leading-none select-none">"</span>
-                  <blockquote className="font-accent italic text-brand-ink text-lg leading-[1.55] mt-4">
+                <figure key={i} className="bg-white/60 border border-brand-gold/20 rounded-lg p-7">
+                  <span aria-hidden="true" className="block w-10 h-px bg-brand-gold/60 mb-4" />
+                  <blockquote className="font-display text-brand-ink text-lg leading-[1.55]">
                     {r.quote || r.body || r.text}
                   </blockquote>
                   <figcaption className="mt-5 font-body text-xs tracking-widest uppercase text-brand-husk">
@@ -397,9 +397,9 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
               <div>
-                <p className="font-accent italic text-brand-gold text-xs tracking-[0.35em] uppercase mb-3">The journal</p>
+                <p className="eyebrow text-brand-gold tracking-[0.35em] mb-3">The journal</p>
                 <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] text-brand-bone"
-                    style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100" }}>
+                    style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 0" }}>
                   Stories from the grove.
                 </h2>
               </div>
@@ -414,7 +414,7 @@ export default function Home() {
                     <img src={post.cover_image || post.image} alt={post.title} loading="lazy" decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <p className="font-accent italic text-brand-gold text-[11px] tracking-[0.3em] uppercase mt-5">{post.category || "Journal"}</p>
+                  <p className="eyebrow text-brand-gold text-[11px] tracking-[0.3em] mt-5">{post.category || "Journal"}</p>
                   <h3 className="font-display text-xl text-brand-bone mt-2 group-hover:text-brand-gold transition-colors">
                     {post.title}
                   </h3>

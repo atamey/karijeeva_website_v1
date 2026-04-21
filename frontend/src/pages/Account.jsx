@@ -26,7 +26,7 @@ export function Account() {
       <Seo title="My Account" description="Karijeeva account dashboard." />
       <section className="bg-brand-parchment min-h-[calc(100vh-72px)]">
         <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Welcome back</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Welcome back</p>
           <h1 className="text-h1 text-brand-obsidian" data-testid="account-name">{user.name}</h1>
           <p className="font-body text-ink-muted mt-2">{user.email}</p>
           <div className="mt-12 grid sm:grid-cols-2 gap-6">
@@ -70,7 +70,7 @@ export function Orders() {
       <Seo title="My Orders" description="Your Karijeeva order history." />
       <section className="bg-brand-parchment min-h-[calc(100vh-72px)]">
         <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Order history</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Order history</p>
           <h1 className="text-h1 text-brand-obsidian">Your orders</h1>
           {orders === null && <p className="font-body text-ink-muted mt-10">Loading…</p>}
           {orders?.length === 0 && (

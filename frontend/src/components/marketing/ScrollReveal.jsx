@@ -8,7 +8,7 @@ export default function ScrollReveal({
   children,
   delay = 0,
   y = 24,
-  className = "",
+  className="",
   once = true,
   as: Tag = "div",
 }) {

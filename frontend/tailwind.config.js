@@ -79,7 +79,7 @@ module.exports = {
                 fontFamily: {
                         display: ['var(--font-display)'],
                         body:    ['var(--font-body)'],
-                        accent:  ['var(--font-accent)'],
+                        accent:  ['var(--font-display)'],
                         sans:    ['var(--font-body)']
                 },
                 fontSize: {

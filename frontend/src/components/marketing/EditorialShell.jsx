@@ -7,9 +7,9 @@ import Seo, { breadcrumbLd } from "@/components/seo/Seo";
  * Press, Careers, Gift Cards, Subscribe & Save).
  *
  * Props:
- *   kicker    — small italic eyebrow (accent)
- *   title     — H1 (Fraunces)
- *   subtitle  — H2 (Instrument Serif italic)
+ *   kicker    — small uppercase eyebrow (Inter Tight, wide tracking)
+ *   title     — H1 (Fraunces display)
+ *   subtitle  — H2 lede (upright Fraunces, never italic)
  *   heroImage — full-bleed hero image URL
  *   seoTitle, seoDescription, breadcrumb ([{name, path}])
  *   children  — body content (prose-styled)
@@ -51,7 +51,7 @@ export default function EditorialShell({
         <div className="absolute inset-0 bg-gradient-to-t from-brand-obsidian via-brand-obsidian/70 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
           {kicker && (
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-5">
+            <p className="eyebrow text-brand-gold tracking-[0.3em] mb-5">
               {kicker}
             </p>
           )}
@@ -59,7 +59,7 @@ export default function EditorialShell({
             {title}
           </h1>
           {subtitle && (
-            <p className="font-accent italic text-brand-parchment/80 text-lg sm:text-xl mt-6 max-w-2xl">
+            <p className="font-display text-brand-parchment/80 text-lg sm:text-xl mt-6 max-w-2xl">
               {subtitle}
             </p>
           )}

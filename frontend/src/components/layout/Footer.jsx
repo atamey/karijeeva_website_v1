@@ -93,7 +93,7 @@ export default function Footer() {
               <Leaf className="w-5 h-5 text-brand-gold" />
               <span className="font-display text-3xl text-brand-gold tracking-wide">Karijeeva</span>
             </div>
-            <p className="font-accent italic text-brand-parchment/75 text-sm mb-8 leading-relaxed max-w-sm">
+            <p className="font-display text-brand-parchment/75 text-sm mb-8 leading-relaxed max-w-sm">
               "Kadi jeeva — the long life, bottled at dawn in small batches of
               cold-pressed coconut oil."
             </p>
@@ -201,7 +201,7 @@ export default function Footer() {
         <div className="border-t border-brand-gold/20">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <span
-              className="font-accent italic text-xs text-brand-parchment/55 tracking-[0.2em] uppercase leading-relaxed"
+              className="eyebrow text-brand-parchment/55 tracking-[0.2em] leading-relaxed"
               data-testid="footer-copyright"
             >
               © {year} A brand by{" "}

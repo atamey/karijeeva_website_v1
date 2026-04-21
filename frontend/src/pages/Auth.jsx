@@ -11,7 +11,7 @@ function AuthCard({ title, kicker, children, alt }) {
   return (
     <section className="bg-brand-parchment min-h-[calc(100vh-72px)] flex items-center">
       <div className="max-w-md w-full mx-auto px-6 py-16">
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase text-center mb-3">{kicker}</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em] text-center mb-3">{kicker}</p>
         <h1 className="text-h2 text-brand-obsidian text-center">{title}</h1>
         <div className="mt-10 brand-card p-8 bg-white">{children}</div>
         <p className="font-body text-sm text-ink-muted text-center mt-6">{alt}</p>

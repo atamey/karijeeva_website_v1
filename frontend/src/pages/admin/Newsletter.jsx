@@ -14,7 +14,7 @@ export default function AdminNewsletter() {
     <div className="space-y-6" data-testid="admin-newsletter">
       <div className="flex items-end justify-between flex-wrap gap-3">
         <div>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Subscribers</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">Subscribers</p>
           <h1 className="font-display text-4xl text-brand-obsidian">Newsletter</h1>
           <p className="font-body text-sm text-ink-muted mt-1">{subs.length} subscribers</p>
         </div>

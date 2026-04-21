@@ -46,7 +46,7 @@ export default function AdminCoupons() {
     <div className="space-y-6" data-testid="admin-coupons">
       <div className="flex items-end justify-between flex-wrap gap-3">
         <div>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Discounts</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">Discounts</p>
           <h1 className="font-display text-4xl text-brand-obsidian">Coupons</h1>
         </div>
         <Button variant="primary" onClick={() => setCreating(true)} data-testid="coupon-new"><Plus className="w-4 h-4" /> New coupon</Button>

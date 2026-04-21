@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
 
-export default function RecipeCard({ recipe, className = "" }) {
+export default function RecipeCard({ recipe, className="" }) {
   return (
     <Link
       to={`/recipes/${recipe.slug}`}

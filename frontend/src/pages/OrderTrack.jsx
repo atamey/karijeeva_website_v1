@@ -77,7 +77,7 @@ export default function OrderTrack() {
       <Seo title={`Track ${order.order_number}`} description="Live tracking for your Karijeeva order." />
       <section className="bg-brand-parchment min-h-[calc(100vh-72px)]" data-testid="order-track">
         <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Order tracking</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Order tracking</p>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h1 className="text-h1 text-brand-obsidian leading-tight" data-testid="track-order-number">{order.order_number}</h1>
@@ -194,7 +194,7 @@ export default function OrderTrack() {
                 <span className="text-ink-muted">{order.address_snapshot?.phone}</span>
               </p>
               <div className="mt-6 pt-5 border-t border-brand-gold/15">
-                <h4 className="font-accent italic text-brand-gold text-xs tracking-[0.25em] uppercase mb-2 flex items-center gap-2"><Clock className="w-4 h-4" /> Need help?</h4>
+                <h4 className="eyebrow text-brand-gold tracking-[0.25em] mb-2 flex items-center gap-2"><Clock className="w-4 h-4" /> Need help?</h4>
                 <p className="font-body text-sm text-brand-husk mb-3">We typically respond within 24 hours.</p>
                 <div className="flex flex-wrap gap-2">
                   <Button asChild variant="secondary" size="sm"><Link to="/contact">Contact support</Link></Button>

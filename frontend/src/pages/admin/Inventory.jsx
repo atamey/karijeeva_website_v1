@@ -35,7 +35,7 @@ export default function AdminInventory() {
     <div className="space-y-6" data-testid="admin-inventory">
       <div className="flex items-end justify-between flex-wrap gap-3">
         <div>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Stock</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">Stock</p>
           <h1 className="font-display text-4xl text-brand-obsidian">Inventory</h1>
         </div>
         <Button asChild variant="secondary"><Link to="/admin/inventory/logs"><ScrollText className="w-4 h-4" /> View audit log</Link></Button>
@@ -164,7 +164,7 @@ export function InventoryLogs() {
   return (
     <div className="space-y-6" data-testid="admin-inventory-logs">
       <div>
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Audit</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Audit</p>
         <h1 className="font-display text-4xl text-brand-obsidian">Inventory logs</h1>
       </div>
       <div className="flex gap-3">

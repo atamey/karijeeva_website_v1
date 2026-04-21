@@ -143,7 +143,7 @@ export default function PillarPage() {
       {/* Hero */}
       <section className="bg-brand-parchment-soft border-b border-brand-gold/15">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 py-16">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">The complete guide</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">The complete guide</p>
           <h1 className="text-h1 text-brand-obsidian leading-[1.05]" data-testid="pillar-h1">
             Cold-Pressed Coconut Oil: Benefits, Uses & How to Buy Right.
           </h1>
@@ -157,9 +157,9 @@ export default function PillarPage() {
       {/* TL;DR */}
       <section className="bg-brand-parchment">
         <div className="max-w-4xl mx-auto px-6 lg:px-10 py-12" data-testid="pillar-tldr">
-          <aside className="p-8 rounded-lg border-2 border-dashed border-brand-gold/50 bg-white">
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">TL;DR</p>
-            <p className="font-body text-brand-husk/90 leading-relaxed">
+          <aside className="pl-8 py-4 border-l-2 border-brand-gold bg-white/30">
+            <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">TL;DR</p>
+            <p className="font-display text-brand-husk/90 text-lg md:text-xl leading-[1.5] font-light tracking-[-0.005em]">
               Cold-pressed coconut oil is extracted below 35°C from fresh coconut meat. Unlike refined
               (RBD) oil — which is bleached, heat-processed, and often solvent-extracted — cold-press
               retains natural polyphenols, vitamin E, and the characteristic aroma. It is the right grade
@@ -178,7 +178,7 @@ export default function PillarPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-10 pb-20 grid lg:grid-cols-4 gap-12">
           {/* TOC */}
           <aside className="lg:col-span-1 lg:sticky lg:top-24 self-start" data-testid="pillar-toc">
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">In this guide</p>
+            <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">In this guide</p>
             <ol className="space-y-1 font-body text-sm border-l-2 border-brand-gold/15">
               {TOC.map((t, i) => (
                 <li key={t.id}>

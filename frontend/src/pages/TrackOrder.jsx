@@ -58,11 +58,11 @@ export default function TrackOrder() {
 
       <section className="bg-brand-obsidian text-brand-parchment">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20" data-testid="page-track-order">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">Order lookup</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">Order lookup</p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand-parchment max-w-3xl">
             Track your order
           </h1>
-          <p className="font-accent italic text-brand-parchment/80 text-lg mt-5 max-w-xl">
+          <p className="font-display text-brand-parchment/80 text-lg mt-5 max-w-xl">
             Two fields. No sign-in required.
           </p>
         </div>

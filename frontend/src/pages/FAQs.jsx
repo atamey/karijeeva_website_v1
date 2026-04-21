@@ -80,11 +80,11 @@ export default function FAQsPage() {
 
       <section className="bg-brand-obsidian text-brand-parchment">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-24" data-testid="page-faqs">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">Help centre</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">Help centre</p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand-parchment max-w-4xl">
             Frequently Asked Questions
           </h1>
-          <p className="font-accent italic text-brand-parchment/80 text-lg sm:text-xl mt-6 max-w-2xl">
+          <p className="font-display text-brand-parchment/80 text-lg sm:text-xl mt-6 max-w-2xl">
             {faqs.length} questions, honest answers. Can't find yours?
             <Link to="/contact" className="underline decoration-brand-gold/50 underline-offset-4 ml-1 hover:decoration-brand-gold">Write to us</Link>.
           </p>
@@ -106,7 +106,7 @@ export default function FAQsPage() {
       <section className="bg-brand-parchment">
         <div className="max-w-4xl mx-auto px-6 lg:px-10 py-16 space-y-12">
           {groups.length === 0 && (
-            <p className="font-body text-brand-husk italic">
+            <p className="font-body text-brand-husk">
               No questions match &ldquo;{query}&rdquo;. <button onClick={() => setQuery("")} className="underline hover:text-brand-gold">Clear search</button>.
             </p>
           )}

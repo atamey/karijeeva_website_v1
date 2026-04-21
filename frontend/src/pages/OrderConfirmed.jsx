@@ -49,7 +49,7 @@ export default function OrderConfirmed() {
             <div className="inline-flex w-16 h-16 rounded-full bg-brand-obsidian items-center justify-center mb-6">
               <Check className="w-8 h-8 text-brand-gold" strokeWidth={2.5} />
             </div>
-            <p className="font-accent italic text-brand-gold text-sm tracking-[0.3em] uppercase mb-3">Order confirmed</p>
+            <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Order confirmed</p>
             <h1 className="text-h1 text-brand-obsidian leading-tight">Thank you.</h1>
             <p className="font-body text-body-lg text-ink-muted mt-4">Your basket is on its way to the grove. A confirmation email is already headed to you.</p>
             <p className="font-display text-h4 text-brand-obsidian mt-6" data-testid="order-number">{order.order_number}</p>
@@ -59,7 +59,7 @@ export default function OrderConfirmed() {
             <div className="brand-card p-6 flex gap-4">
               <Truck className="w-6 h-6 text-brand-gold shrink-0" />
               <div>
-                <p className="font-accent italic text-xs tracking-[0.25em] uppercase text-brand-gold">Expected delivery</p>
+                <p className="eyebrow tracking-[0.25em] text-brand-gold">Expected delivery</p>
                 <p className="font-display text-lg text-brand-obsidian">By {eta}</p>
                 <p className="font-body text-xs text-ink-muted mt-1">Dispatched in 24–48 hours</p>
               </div>
@@ -67,7 +67,7 @@ export default function OrderConfirmed() {
             <div className="brand-card p-6 flex gap-4">
               <Package className="w-6 h-6 text-brand-gold shrink-0" />
               <div>
-                <p className="font-accent italic text-xs tracking-[0.25em] uppercase text-brand-gold">Shipping to</p>
+                <p className="eyebrow tracking-[0.25em] text-brand-gold">Shipping to</p>
                 <p className="font-display text-lg text-brand-obsidian leading-tight">{order.address_snapshot?.full_name}</p>
                 <p className="font-body text-xs text-ink-muted mt-1">
                   {order.address_snapshot?.city}, {order.address_snapshot?.state} {order.address_snapshot?.pincode}

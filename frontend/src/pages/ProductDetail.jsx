@@ -344,7 +344,7 @@ export default function ProductDetail() {
         <section className="bg-brand-parchment" data-testid="pdp-pairs-with">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
             <ScrollReveal>
-              <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">
+              <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">
                 In the kitchen
               </p>
               <h2 className="text-h2 text-brand-obsidian max-w-2xl">

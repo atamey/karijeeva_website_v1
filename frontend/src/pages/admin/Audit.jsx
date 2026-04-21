@@ -14,7 +14,7 @@ export default function AdminAudit() {
   return (
     <div className="space-y-6" data-testid="admin-audit">
       <div>
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Accountability</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Accountability</p>
         <h1 className="font-display text-4xl text-brand-obsidian">Audit log</h1>
       </div>
       <div className="grid grid-cols-3 gap-3 max-w-3xl">

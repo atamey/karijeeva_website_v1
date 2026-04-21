@@ -206,7 +206,7 @@ export default function ReviewsBlock({ product, user, onSubmitted }) {
           </div>
         ) : (
           <form onSubmit={submit} className="space-y-4" data-testid="reviews-form">
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Write a review</p>
+            <p className="eyebrow text-brand-gold tracking-[0.3em]">Write a review</p>
 
             <div>
               <label className="font-body text-xs uppercase tracking-[0.2em] text-ink-muted block mb-2">Your rating</label>

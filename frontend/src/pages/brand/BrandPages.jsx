@@ -315,7 +315,7 @@ export function Sustainability() {
         <li><strong>Doubled grove partners</strong> — from 6 to 12 families, prioritising those transitioning from monoculture.</li>
       </ul>
 
-      <p className="pt-4 italic">
+      <p className="pt-4">
         We are at the start of this journey, not the end. If you find something we
         could do better, write to us at <a className="underline" href={`mailto:${supportEmail}`}>{supportEmail}</a> — we read every note.
       </p>
@@ -350,7 +350,7 @@ export function Press() {
         {logos.map((p, i) => (
           <div key={i} className="border border-brand-gold/20 bg-white/60 rounded-lg p-6">
             <p className="font-display text-2xl text-brand-obsidian tracking-wide">{p.name}</p>
-            <p className="font-accent italic text-brand-husk mt-3 leading-relaxed">
+            <p className="font-display text-brand-husk mt-3 leading-relaxed">
               &ldquo;{p.subtitle}&rdquo;
             </p>
             <a href="/" className="mt-4 inline-block text-xs uppercase tracking-[0.25em] text-brand-gold hover:underline">
@@ -453,7 +453,7 @@ export function Careers() {
       <GoldRule />
 
       <div className="not-prose bg-brand-parchment-soft border border-brand-gold/20 rounded-lg p-6 sm:p-8">
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">
+        <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">
           Keep in touch
         </p>
         <h3 className="font-display text-2xl text-brand-obsidian">Tell us about you</h3>
@@ -522,7 +522,7 @@ export function GiftCards() {
         {denoms.map((d) => (
           <div key={d}
                className="aspect-[4/5] rounded-lg bg-brand-obsidian text-brand-parchment border border-brand-gold/30 flex flex-col items-center justify-center p-6 shadow-soft">
-            <p className="font-accent italic text-xs tracking-[0.25em] uppercase text-brand-gold">Karijeeva</p>
+            <p className="eyebrow tracking-[0.25em] text-brand-gold">Karijeeva</p>
             <p className="font-display text-3xl mt-2 text-brand-parchment">₹{d.toLocaleString("en-IN")}</p>
             <p className="font-body text-xs text-brand-parchment/60 mt-auto">Digital gift card</p>
           </div>
@@ -538,7 +538,7 @@ export function GiftCards() {
       <GoldRule />
 
       <div className="not-prose bg-white border border-brand-gold/20 rounded-lg p-6 sm:p-8">
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">
+        <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">
           Waitlist
         </p>
         <h3 className="font-display text-2xl text-brand-obsidian">Notify me when gift cards launch</h3>
@@ -613,7 +613,7 @@ export function SubscribeSave() {
       <GoldRule />
 
       <div className="not-prose bg-white border border-brand-gold/20 rounded-lg p-6 sm:p-8">
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">
+        <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">
           Waitlist
         </p>
         <h3 className="font-display text-2xl text-brand-obsidian">Tell me when Subscribe &amp; Save launches</h3>

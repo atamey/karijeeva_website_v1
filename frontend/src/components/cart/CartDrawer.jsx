@@ -121,7 +121,7 @@ export default function CartDrawer() {
               {/* WELCOME10 pre-fill banner */}
               {welcomeCode && !coupon && countdown && countdown !== "expired" && (
                 <div className="mb-3 p-3 rounded-md border border-dashed border-brand-gold/50 bg-white text-center" data-testid="cart-welcome-banner">
-                  <p className="font-accent italic text-brand-gold text-xs tracking-[0.25em] uppercase">Your welcome code</p>
+                  <p className="eyebrow text-brand-gold tracking-[0.25em]">Your welcome code</p>
                   <p className="font-body text-xs text-brand-husk mt-1">
                     <Clock className="w-3 h-3 inline -mt-0.5 mr-1 text-brand-gold" />
                     Expires in <span className="font-mono text-brand-obsidian" data-testid="welcome-countdown">{countdown}</span>
@@ -182,7 +182,7 @@ export default function CartDrawer() {
   );
 }
 
-function Row({ label, value, className = "", big }) {
+function Row({ label, value, className="", big }) {
   return (
     <div className={`flex items-center justify-between ${big ? "" : ""} ${className}`}>
       <dt className={big ? "" : "text-ink-muted"}>{label}</dt>

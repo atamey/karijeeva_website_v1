@@ -48,7 +48,7 @@ export default function OrderRequestDialog({ open, type, orderId, email = "", on
     <Dialog open={open} onOpenChange={(v) => !v && onClose?.()}>
       <DialogContent data-testid="order-request-dialog" className="bg-brand-parchment border-brand-gold/25">
         <DialogHeader>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Order {type === "return" ? "return" : "cancellation"}</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">Order {type === "return" ? "return" : "cancellation"}</p>
           <DialogTitle className="font-display text-h3 text-brand-obsidian">{title}</DialogTitle>
           <DialogDescription className="font-body text-brand-husk">{copy}</DialogDescription>
         </DialogHeader>

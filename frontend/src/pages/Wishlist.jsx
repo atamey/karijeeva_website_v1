@@ -28,7 +28,7 @@ export default function Wishlist() {
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="flex items-end justify-between flex-wrap gap-4">
             <div>
-              <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Saved for later</p>
+              <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Saved for later</p>
               <h1 className="text-h1 text-brand-obsidian">Your wishlist</h1>
               <p className="font-body text-ink-muted mt-2">
                 {items.length === 0 ? "Nothing saved yet." : `${items.length} item${items.length === 1 ? "" : "s"} waiting for a weekend.`}
@@ -60,7 +60,7 @@ export default function Wishlist() {
                     <img src={it.image} alt={it.product_name} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                   </Link>
                   <div className="p-5">
-                    <p className="font-accent italic text-brand-gold text-[11px] tracking-[0.25em] uppercase">{it.variant_size}</p>
+                    <p className="eyebrow text-brand-gold text-[11px] tracking-[0.25em]">{it.variant_size}</p>
                     <h3 className="font-display text-xl text-brand-obsidian leading-tight mt-1">
                       <Link to={`/products/${it.product_slug}`}>{it.product_name}</Link>
                     </h3>

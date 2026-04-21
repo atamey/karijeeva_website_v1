@@ -50,7 +50,7 @@ export default function PolicyShell({
 
       <section className="bg-brand-obsidian text-brand-parchment">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-24" data-testid={testid}>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">
             {kicker}
           </p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand-parchment max-w-4xl">
@@ -106,7 +106,7 @@ export default function PolicyShell({
             ))}
 
             {footerNote && (
-              <p className="mt-12 pt-8 border-t border-brand-gold/25 font-accent italic text-sm text-brand-husk/75">
+              <p className="mt-12 pt-8 border-t border-brand-gold/25 font-display text-sm text-brand-husk/75">
                 {footerNote}
               </p>
             )}

@@ -34,7 +34,7 @@ export default function VisionSection({ vision }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-accent italic text-brand-gold text-xs tracking-[0.35em] uppercase mt-8 mb-10"
+          className="eyebrow text-brand-gold tracking-[0.35em] mt-8 mb-10"
         >
           Our Vision
         </motion.p>
@@ -44,10 +44,10 @@ export default function VisionSection({ vision }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="font-accent italic text-brand-parchment leading-snug text-3xl sm:text-4xl lg:text-5xl max-w-4xl mx-auto"
+          className="font-display text-brand-parchment leading-[1.35] text-3xl sm:text-4xl lg:text-5xl max-w-4xl mx-auto tracking-[-0.015em]"
           data-testid="vision-statement"
         >
-          &ldquo;{vision}&rdquo;
+          {vision}
         </motion.blockquote>
 
         {/* Gold rule — bottom */}

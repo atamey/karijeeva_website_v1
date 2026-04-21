@@ -33,7 +33,7 @@ export default function AdminRequests() {
   return (
     <div className="space-y-6" data-testid="admin-requests">
       <div>
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Queue</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Queue</p>
         <h1 className="font-display text-4xl text-brand-obsidian">Cancellations & returns</h1>
       </div>
 

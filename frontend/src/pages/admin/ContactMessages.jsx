@@ -26,7 +26,7 @@ export default function AdminContactMessages() {
   return (
     <div className="space-y-6" data-testid="admin-contact">
       <div>
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Inbox</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Inbox</p>
         <h1 className="font-display text-4xl text-brand-obsidian">Contact messages</h1>
       </div>
       <div className="flex gap-2">

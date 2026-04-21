@@ -44,11 +44,11 @@ export default function About() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(11, 8, 6,0.3) 0%, rgba(11, 8, 6,0.85) 100%)" }} />
         <div className="relative max-w-7xl w-full mx-auto px-6 lg:px-10 py-24">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">Est. 2019 · Kadle Global</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">Est. 2019 · Kadle Global</p>
           <h1 className="text-h1 text-brand-parchment max-w-3xl" data-testid="about-headline">
             The long life, <span className="gold-underline">bottled.</span>
           </h1>
-          <p className="font-accent italic text-xl sm:text-2xl text-brand-parchment/90 mt-6 max-w-3xl leading-snug" data-testid="about-vision">
+          <p className="font-display text-xl sm:text-2xl text-brand-parchment/90 mt-6 max-w-3xl leading-snug" data-testid="about-vision">
             "{site?.vision_statement || "At Karijeeva, we envision a world where wellness is returned to its purest form."}"
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function About() {
       <section className="bg-brand-parchment">
         <div className="max-w-4xl mx-auto px-6 lg:px-10 py-24 text-center">
           <ScrollReveal>
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">Why Karijeeva exists</p>
+            <p className="eyebrow text-brand-gold tracking-[0.3em] mb-4">Why Karijeeva exists</p>
             <h2 className="text-h2 text-brand-obsidian leading-tight">
               Most oil in India now passes through a factory.
               <br />
@@ -78,7 +78,7 @@ export default function About() {
       <section className="bg-brand-parchment-soft border-y border-brand-gold/15" data-testid="about-timeline">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 py-24">
           <ScrollReveal>
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase text-center mb-3">Grove to kitchen</p>
+            <p className="eyebrow text-brand-gold tracking-[0.3em] text-center mb-3">Grove to kitchen</p>
             <h2 className="text-h2 text-brand-obsidian text-center mb-16">Five steps. Zero shortcuts.</h2>
           </ScrollReveal>
           <ol className="space-y-10 relative">
@@ -89,7 +89,7 @@ export default function About() {
                   <div className="absolute left-0 top-0 h-11 w-11 rounded-full bg-brand-obsidian text-brand-gold font-display text-lg flex items-center justify-center border-4 border-brand-parchment-soft">
                     {i + 1}
                   </div>
-                  <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">{step.year}</p>
+                  <p className="eyebrow text-brand-gold tracking-[0.3em]">{step.year}</p>
                   <h3 className="text-h3 text-brand-obsidian mt-2">{step.title}</h3>
                   <p className="font-body text-body-lg text-brand-husk/80 mt-2">{step.body}</p>
                 </li>
@@ -103,7 +103,7 @@ export default function About() {
       <section className="bg-brand-parchment">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
           <ScrollReveal>
-            <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">The four things we refuse to compromise on</p>
+            <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">The four things we refuse to compromise on</p>
             <h2 className="text-h2 text-brand-obsidian max-w-2xl">Our values.</h2>
           </ScrollReveal>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

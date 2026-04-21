@@ -72,7 +72,7 @@ export default function AdminSettings() {
   return (
     <div className="space-y-6" data-testid="admin-settings">
       <div>
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Site</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Site</p>
         <h1 className="font-display text-4xl text-brand-obsidian">Settings</h1>
         <p className="font-body text-sm text-ink-muted mt-1">
           Changes publish immediately to the public storefront, the footer, legal pages, and invoices.

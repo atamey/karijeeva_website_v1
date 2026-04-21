@@ -37,7 +37,7 @@ export default function RecipeDetail() {
         <img src={recipe.hero_image} alt={recipe.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 40%, rgba(11, 8, 6,0.85))" }} />
         <div className="absolute inset-x-0 bottom-0 max-w-7xl mx-auto px-6 lg:px-10 pb-10 text-brand-parchment">
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-3">Recipe</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mb-3">Recipe</p>
           <h1 className="text-h1 max-w-3xl leading-[1.05]">{recipe.title}</h1>
           {recipe.cook_time_min && (
             <p className="mt-4 inline-flex items-center gap-2 font-body text-brand-parchment/80">
@@ -62,7 +62,7 @@ export default function RecipeDetail() {
               </ul>
               {recipe.pairs_with_product && (
                 <div className="mt-10 brand-card p-6" data-testid="recipe-pairs-with">
-                  <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mb-2">Made with</p>
+                  <p className="eyebrow text-brand-gold tracking-[0.3em] mb-2">Made with</p>
                   <h3 className="font-display text-xl text-brand-obsidian leading-tight">{recipe.pairs_with_product.name}</h3>
                   <p className="font-body text-xs text-ink-muted mt-2 line-clamp-2">{recipe.pairs_with_product.short_desc}</p>
                   <Button asChild variant="dark" size="sm" className="mt-5">

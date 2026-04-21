@@ -18,12 +18,12 @@ export default function TestimonialCarousel({ testimonials = [] }) {
   return (
     <section className="bg-brand-parchment-soft" data-testid="testimonials-carousel">
       <div className="max-w-4xl mx-auto px-6 lg:px-10 py-24">
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase text-center mb-8">
+        <p className="eyebrow text-brand-gold tracking-[0.3em] text-center mb-8">
           From our kitchens
         </p>
         <div className="relative text-center" key={idx}>
           <Quote className="w-10 h-10 text-brand-gold/40 mx-auto mb-6" />
-          <p className="font-display italic text-2xl sm:text-3xl lg:text-4xl text-brand-obsidian leading-relaxed fade-up">
+          <p className="font-display text-2xl sm:text-3xl lg:text-4xl text-brand-obsidian leading-relaxed fade-up">
             "{t.quote}"
           </p>
           <div className="mt-10 flex flex-col items-center gap-3">

@@ -118,7 +118,7 @@ export default function RazorpayPoc() {
               <Check className="w-8 h-8 text-ivory" strokeWidth={2.5} />
             </div>
             <div>
-              <p className="font-accent italic text-gold text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="eyebrow text-gold tracking-[0.3em] mb-3">
                 Transaction Verified
               </p>
               <h1 className="font-display text-5xl text-forest leading-tight">
@@ -132,7 +132,7 @@ export default function RazorpayPoc() {
             <div className="w-full border-t border-b border-gold/25 py-6 space-y-3 text-left">
               <div className="flex justify-between text-sm">
                 <span className="text-brown/70 font-body">Amount</span>
-                <span className="font-accent text-forest text-lg">₹{success.amount}</span>
+                <span className="font-display text-forest text-lg">₹{success.amount}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-brown/70 font-body">Payment ID</span>
@@ -193,7 +193,7 @@ export default function RazorpayPoc() {
               Karijeeva
             </span>
           </div>
-          <span className="font-accent italic text-xs sm:text-sm text-brown/70 tracking-[0.25em] uppercase">
+          <span className="eyebrow sm: text-brown/70 tracking-[0.25em]">
             Phase 0 · Razorpay POC
           </span>
         </div>
@@ -206,7 +206,7 @@ export default function RazorpayPoc() {
             className="fade-up"
             data-testid="poc-product-card"
           >
-            <p className="font-accent italic text-gold text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="eyebrow text-gold tracking-[0.3em] mb-4">
               Est. Kadle Global · Bharat
             </p>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-forest leading-[1.05]">
@@ -289,7 +289,7 @@ export default function RazorpayPoc() {
                 </div>
                 <div className="col-span-3 p-8 flex flex-col justify-between">
                   <div>
-                    <p className="font-accent italic text-xs tracking-[0.25em] uppercase text-gold">
+                    <p className="eyebrow tracking-[0.25em] text-gold">
                       Single Origin · Karnataka
                     </p>
                     <h3 className="font-display text-2xl text-forest mt-2 leading-tight">
@@ -322,7 +322,7 @@ export default function RazorpayPoc() {
           >
             <div className="flex items-center gap-2 text-gold mb-3">
               <Sparkles className="w-4 h-4" />
-              <span className="font-accent italic text-xs tracking-[0.3em] uppercase">
+              <span className="eyebrow tracking-[0.3em]">
                 Secure Test Checkout
               </span>
             </div>
@@ -395,7 +395,7 @@ export default function RazorpayPoc() {
 
       <footer className="relative z-10 border-t border-gold/20 mt-10">
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span className="font-accent italic text-xs text-brown/60 tracking-[0.25em] uppercase">
+          <span className="eyebrow text-brown/60 tracking-[0.25em]">
             Kadle Global Pvt Ltd · Karijeeva
           </span>
           <span className="font-body text-xs text-brown/50">

@@ -69,7 +69,7 @@ export default function Products() {
             </BreadcrumbList>
           </Breadcrumb>
 
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase mt-8 mb-3">
+          <p className="eyebrow text-brand-gold tracking-[0.3em] mt-8 mb-3">
             The collection
           </p>
           <h1 className="text-h1 text-brand-obsidian" data-testid="products-heading">{heading}</h1>

@@ -21,7 +21,7 @@ export default function AdminCustomers() {
     <div className="space-y-6" data-testid="admin-customers">
       <div className="flex items-end justify-between flex-wrap gap-3">
         <div>
-          <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">People</p>
+          <p className="eyebrow text-brand-gold tracking-[0.3em]">People</p>
           <h1 className="font-display text-4xl text-brand-obsidian">Customers</h1>
           <p className="font-body text-sm text-ink-muted mt-1">{data.total} registered</p>
         </div>
@@ -80,7 +80,7 @@ export function CustomerDetail() {
       </Link>
 
       <div className="bg-white border border-brand-gold/20 rounded-lg p-6">
-        <p className="font-accent italic text-brand-gold text-xs tracking-[0.3em] uppercase">Customer</p>
+        <p className="eyebrow text-brand-gold tracking-[0.3em]">Customer</p>
         <h1 className="font-display text-4xl text-brand-obsidian">{user.name}</h1>
         <div className="mt-2 flex flex-wrap gap-5 font-body text-sm text-brand-husk">
           <span className="inline-flex items-center gap-2"><Mail className="w-4 h-4 text-brand-gold" /> {user.email}</span>
